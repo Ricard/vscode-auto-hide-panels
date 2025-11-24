@@ -1,0 +1,61 @@
+{
+  "name": "auto-hide-panels",
+  "displayName": "Auto Hide Panels",
+  "description": "Automatically hides the Side Bar and Panel when the editor is focused.",
+  "version": "0.0.1",
+  "publisher": "ricard",
+  "author": {
+    "name": "Ricard Castello",
+    "email": "ricard.castello@gmail.com"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Ricard/vscode-auto-hide-panels.git"
+  },
+  "engines": {
+    "vscode": "^1.80.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "keywords": [
+    "ui",
+    "hide",
+    "sidebar",
+    "panel",
+    "productivity"
+  ],
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "auto-hide-panels.toggle",
+        "title": "Toggle Auto Hide Panels"
+      }
+    ],
+    "configuration": {
+      "title": "Auto Hide Panels",
+      "properties": {
+        "autoHidePanels.enabled": {
+          "type": "boolean",
+          "default": true,
+          "description": "Enable/Disable auto-hiding of Side Bar and Panel."
+        }
+      }
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.80.0",
+    "@types/node": "18.x",
+    "typescript": "^5.1.3"
+  }
+}
