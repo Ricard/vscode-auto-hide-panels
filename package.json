@@ -1,7 +1,7 @@
 {
   "name": "auto-hide-panels",
   "displayName": "Auto Hide Panels",
-  "description": "Automatically hides the Side Bar and Panel when the editor is focused.",
+  "description": "Automatically hides the Side Bar, Panel, and Secondary Side Bar when the editor is focused, with granular control over each component.",
   "version": "0.0.1",
   "publisher": "ricard",
   "author": {
@@ -24,6 +24,8 @@
     "hide",
     "sidebar",
     "panel",
+    "secondary sidebar",
+    "auxiliary bar",
     "productivity"
   ],
   "activationEvents": [
@@ -34,7 +36,19 @@
     "commands": [
       {
         "command": "auto-hide-panels.toggle",
-        "title": "Toggle Auto Hide Panels"
+        "title": "Auto Hide Panels: Toggle Extension"
+      },
+      {
+        "command": "auto-hide-panels.togglePanel",
+        "title": "Auto Hide Panels: Toggle Auto Hide Panel"
+      },
+      {
+        "command": "auto-hide-panels.toggleSidebar",
+        "title": "Auto Hide Panels: Toggle Auto Hide Sidebar"
+      },
+      {
+        "command": "auto-hide-panels.toggleSecondarySidebar",
+        "title": "Auto Hide Panels: Toggle Auto Hide Secondary Sidebar"
       }
     ],
     "configuration": {
@@ -43,7 +57,22 @@
         "autoHidePanels.enabled": {
           "type": "boolean",
           "default": true,
-          "description": "Enable/Disable auto-hiding of Side Bar and Panel."
+          "description": "Master toggle to enable/disable the extension."
+        },
+        "autoHidePanels.autoHidePanel": {
+          "type": "boolean",
+          "default": true,
+          "description": "Automatically hide the Panel (bottom panel with terminal, output, etc.) when the editor is focused."
+        },
+        "autoHidePanels.autoHideSidebar": {
+          "type": "boolean",
+          "default": true,
+          "description": "Automatically hide the primary Sidebar when the editor is focused."
+        },
+        "autoHidePanels.autoHideSecondarySidebar": {
+          "type": "boolean",
+          "default": false,
+          "description": "Automatically hide the Secondary Sidebar (auxiliary bar) when the editor is focused."
         }
       }
     }

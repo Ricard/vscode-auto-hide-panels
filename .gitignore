@@ -1,0 +1,14 @@
+# Dependencies
+node_modules/
+
+# Compiled output
+out/
+*.js
+*.js.map
+
+# Packaged extensions
+*.vsix
+
+# IDE files
+.vscode-test/
+.vscode/

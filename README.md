@@ -1,18 +1,45 @@
-# Auto Hide UI
+# Auto Hide Panels
 
-This VS Code extension automatically hides the Side Bar and the Panel (Terminal) when the editor is focused.
+This VS Code extension automatically hides the Side Bar, Panel (Terminal), and Secondary Side Bar when the editor is focused, with granular control over each component.
 
 ## Features
 
-- **Auto Hide**: Automatically closes the Side Bar and Panel when you click in the editor or type.
-- **Toggle**: You can enable/disable this behavior via the command `Auto Hide UI: Toggle Auto Hide UI`.
+- **Auto Hide Panel**: Automatically closes the Panel (bottom panel with terminal, output, etc.) when you click in the editor or type.
+- **Auto Hide Sidebar**: Automatically closes the primary Sidebar when you click in the editor or type.
+- **Auto Hide Secondary Sidebar**: Automatically closes the Secondary Sidebar (auxiliary bar) when you click in the editor or type.
+- **Granular Control**: Enable/disable auto-hiding for each component independently.
+- **Toggle Commands**: Quick commands to toggle each feature on/off.
+
+## Commands
+
+Access these commands via the Command Palette (`Ctrl+Shift+P` or `Cmd+Shift+P`):
+
+- `Auto Hide Panels: Toggle Extension` - Master toggle to enable/disable the entire extension
+- `Auto Hide Panels: Toggle Auto Hide Panel` - Toggle auto-hiding of the bottom panel
+- `Auto Hide Panels: Toggle Auto Hide Sidebar` - Toggle auto-hiding of the primary sidebar
+- `Auto Hide Panels: Toggle Auto Hide Secondary Sidebar` - Toggle auto-hiding of the secondary sidebar
 
 ## Settings
 
-- `autoHideUI.enabled`: Enable or disable the extension.
+Configure the extension in your VS Code settings:
+
+- `autoHidePanels.enabled` - Master toggle to enable/disable the extension (default: `true`)
+- `autoHidePanels.autoHidePanel` - Auto-hide the Panel when editor is focused (default: `true`)
+- `autoHidePanels.autoHideSidebar` - Auto-hide the primary Sidebar when editor is focused (default: `true`)
+- `autoHidePanels.autoHideSecondarySidebar` - Auto-hide the Secondary Sidebar when editor is focused (default: `false`)
+
+## Usage
+
+1. Install the extension
+2. By default, the Panel and Sidebar will auto-hide when you focus the editor
+3. Use the toggle commands or modify settings to customize which UI elements auto-hide
+4. Use the master toggle to quickly enable/disable all auto-hide functionality
 
 ## Release Notes
 
 ### 0.0.1
 
-Initial release.
+Initial release with:
+- Auto-hide support for Panel, Sidebar, and Secondary Sidebar
+- Granular configuration for each component
+- Toggle commands for quick control
