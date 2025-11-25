@@ -2,7 +2,7 @@
   "name": "auto-hide-panels",
   "displayName": "Auto Hide Panels",
   "description": "Automatically hides the Side Bar, Panel, and Secondary Side Bar when the editor is focused, with granular control over each component.",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "publisher": "ricard",
   "author": {
     "name": "Ricard Castello",
@@ -80,11 +80,15 @@
   "scripts": {
     "vscode:prepublish": "npm run compile",
     "compile": "tsc -p ./",
-    "watch": "tsc -watch -p ./"
+    "watch": "tsc -watch -p ./",
+    "package": "npm run clean && npm run compile && npm run ensure-vsce && vsce package",
+    "clean": "rimraf out *.vsix",
+    "ensure-vsce": "command -v vsce || npm install -g @vscode/vsce"
   },
   "devDependencies": {
     "@types/vscode": "^1.80.0",
     "@types/node": "18.x",
-    "typescript": "^5.1.3"
+    "typescript": "^5.1.3",
+    "rimraf": "^5.0.0"
   }
 }
