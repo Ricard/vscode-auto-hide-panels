@@ -43,3 +43,13 @@ Initial release with:
 - Auto-hide support for Panel, Sidebar, and Secondary Sidebar
 - Granular configuration for each component
 - Toggle commands for quick control
+
+### 0.0.2
+
+- Added ability to toggle Panel, Sidebar, and Secondary Sidebar independently
+- Introduce build and packaging scripts and instructions
+
+### 0.0.3
+
+- Added extension icon
+- Added LICENSE file
