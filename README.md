@@ -53,3 +53,8 @@ Initial release with:
 
 - Added extension icon
 - Added LICENSE file
+
+### 0.0.4
+
+- Prevent auto-hiding panels on non-mouse selection changes
+

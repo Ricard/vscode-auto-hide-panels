@@ -39,6 +39,11 @@ function activate(context) {
         if (!enabled || e.textEditor.document.uri.scheme === 'output') {
             return;
         }
+        // Only hide panels if the selection change was triggered by user interaction (Mouse or Keyboard)
+        // This prevents panels from hiding when focus changes programmatically (e.g. clicking in Git view)
+        if (e.kind !== vscode.TextEditorSelectionChangeKind.Mouse) {
+            return;
+        }
         // Check each individual setting and hide the corresponding UI element
         const autoHidePanel = config.get('autoHidePanel');
         const autoHideSidebar = config.get('autoHideSidebar');

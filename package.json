@@ -2,7 +2,7 @@
   "name": "auto-hide-panels",
   "displayName": "Auto Hide Panels",
   "description": "Automatically hides the Side Bar, Panel, and Secondary Side Bar when the editor is focused, with granular control over each component.",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "icon": "images/icon.png",
   "publisher": "ricard",
   "author": {
